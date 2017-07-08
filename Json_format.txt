@@ -5,3 +5,33 @@
 
 
  {{ x.UID + ', ' + x.NAME + ', ' + x.STATUS+ ', ' + x.TEMPERATURE}}
+
+
+<div ng-controller="DemoController" ng-init="init()">
+    
+<div class="well">
+     \
+ <i class="fa fa-toggle-on active" ng-if="status == true" ng-click="changeStatus();"></i>
+     
+ <i class="fa fa-toggle-on fa-rotate-180 inactive" ng-if="status == false" ng-click="changeStatus();"></i>
+
+</div>
+
+    <pre>{{status}}</pre>
+ 
+</div>
+
+
+angular.module('switchdemo', []).controller('DemoController', function($scope){
+  
+ 
+ $scope.init = function(){
+    $scope.status = true;
+  }
+  
+
+  $scope.changeStatus = function(){
+    $scope.status = !$scope.status;
+  }
+  
+})
