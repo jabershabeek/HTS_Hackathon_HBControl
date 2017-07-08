@@ -1,0 +1,4 @@
+﻿var objPowerConsumption = new function () {
+
+
+}
