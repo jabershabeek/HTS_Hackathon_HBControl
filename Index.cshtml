@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script>
+
+$( document ).ready(function() {
+    $(".setsize").each(function() {
+        $(this).height($(this).width());
+    });
+});
+$(window).on('resize', function(){
+    $(".setsize").each(function() {
+        $(this).height($(this).width());
+    });
+});
+</script>
+<body>
+
+<div ng-app="hts_hackathon_hc">
+ <div class="border-class fadeInLeft animated" id="NW"><div class="innerContent" >
+ <span>AC</span>
+<label class="switch" style="
+    left: 50px;
+">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label></br>
+<span>Light</span>
+<label class="switch" style="
+    left: 40px;
+">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</br>
+<span>Shutdown</span>
+<label class="switch" >
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+
+</div></div>
+<div class="border-class fadeInLeft animated" id="NE"><div class="innerContent" >
+
+	<div class="progress-radial progress-100 setsize">
+    <div class="overlay setsize">
+      <p>Light</p>
+    </div>
+  </div>
+
+  <div class="progress-radial negative progress-100 setsize">
+    <div class="overlay setsize">
+      <p>AC</p>
+    </div>
+  </div></div></div>
+<div class="border-class fadeInRight animated" id="SE"><div class="innerContent" ><div class="alert alert-warning fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Warning!</strong> After 24 hours of continues usage the device will be automatically turned off
+</div>
+<div class="alert alert-warning fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>Warning!</strong> If the power consumption is 0, then the device will considered a damaged
+</div></div></div>​
+<div class="border-class fadeInRight animated" id="SW">  <div class="innerContent" >
+
+
+
+
+</div></div>
+<div class="content vcontainer fadeIn animated"> <div class="innerContent" >
+
+  <div class="progress-radial progress-45 setsize">
+    <div class="overlay setsize">
+      <p>Light 45%</p>
+    </div>
+  </div>
+
+  <div class="progress-radial progress-100 setsize">
+    <div class="overlay setsize">
+      <p>AC 100%</p>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+</body>
+</html>
