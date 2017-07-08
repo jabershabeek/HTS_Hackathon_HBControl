@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Scripts\PowerConsumption.js" />
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
